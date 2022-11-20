@@ -47,3 +47,6 @@ Example:
 }
 ```
 
+3. CSS Properties
+- **z-index**: The z-index property specifies the stack order of an element. Elements with a higher value will be deplayed on top of elements with the lower values
+

@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,600;0,700;0,800;1,100;1,400;1,600&family=Poppins:wght@300;400;500;600&display=swap");
 
 *,
-*::before *::after {
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   outline: 0;
@@ -74,11 +75,49 @@ img {
 }
 
 .text-bold {
-    font-weight: 500;
+  font-weight: 500;
 }
 
-.text-muted{
-    color: var(--color-gray);
+.text-muted {
+  color: var(--color-gray);
 }
 
 /*================= NAVBAR =================*/
+nav {
+  width: 100%;
+  background: var(--color-white);
+  padding: 0.7rem 0;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .search-bar {
+  background: var(--color-light);
+  border-radius: var(--border-radius);
+  padding: var(--search-padding);
+}
+
+nav .search-bar input[type="search"] {
+  background: transparent;
+  width: 30vw /* "vw" -> 30% of the width of the window */;
+  margin-left: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-dark);
+}
+
+nav .search-bar input[type="search"]::placeholder{
+    color: var(--color-gray);
+}
+
+nav .create{
+    display: flex;
+    align-items: center;
+    gap: 2rem; /* gap indicates the space between the element of the container .create */
+}
