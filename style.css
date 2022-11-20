@@ -201,10 +201,10 @@ main .container .left .profile {
 }
 
 .left .sidebar .active {
-  background: var(--color-light);
-}
-
-.left .sidebar .active i,
-.left .sidebar .active h3 {
-  color: var(--color-primary);
-}
+    background: var(--color-light);
+  }
+  
+  .left .sidebar .active i,
+  .left .sidebar .active h3 {
+    color: var(--color-primary);
+  }
