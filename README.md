@@ -1,7 +1,7 @@
 # izigosocial
 
 ## 1. Resources
-Icons cdn: [iconscout cdn](https://support.iconscout.com/en/article/how-to-use-unicons-1jqisuw/) 
+Icons cdn: [iconscout cdn](https://iconscout.com/unicons) 
 
 Unicons search: [inconscout.com](https://iconscout.com/unicons/explore/line)
 

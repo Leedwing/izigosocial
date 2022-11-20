@@ -87,9 +87,9 @@ nav {
   width: 100%;
   background: var(--color-white);
   padding: 0.7rem 0;
-  position: fixed;
+  position: fixed; /*causes other containers under the nav section to begin on the top of the page. since z-index of nav is 10, these containers will be under the nav container*/
   top: 0;
-  z-index: 10;
+  z-index: 10; /*the z-index property specifies the stack order of an element*/
 }
 
 nav .container {
