@@ -362,6 +362,58 @@ main .container .left .profile {
   margin-right: 1rem;
 }
 
-
 /*----- FEEDS -----*/
+.middle .feeds .feed {
+  background: var(--color-white);
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  line-height: 1.5; /*The gap between 2 lines of text*/
+}
 
+.middle .feeds .feed .head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.middle .feeds .feed .head .user {
+  display: flex;
+  /*justify-content: space-between;/*don't work because there .user and .edit have a space between applied*/
+  gap: 1rem;
+}
+
+.middle .feed .picture {
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+  margin: 0.7rem 0;
+}
+
+.middle .feed .action-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  margin: 0.6rem;
+}
+
+.middle .feed .liked-by{
+    display: flex;
+}
+
+.middle .feed .liked-by span{
+    display: block;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--color-white);
+    margin-left: -0.6rem;
+}
+
+.middle .feed .liked-by span:first-child{
+    margin: 0;
+}
+.middle .feed .liked-by p{
+    margin-left: 0.5rem;
+}
