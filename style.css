@@ -101,13 +101,13 @@ nav .container {
   align-items: center;
 }
 
-nav .search-bar {
+.search-bar {
   background: var(--color-light);
   border-radius: var(--border-radius);
   padding: var(--search-padding);
 }
 
-nav .search-bar input[type="search"] {
+.search-bar input[type="search"] {
   background: transparent;
   width: 30vw /* "vw=viewport width" -> 30% of the width of the window */;
   margin-left: 1rem;
@@ -115,7 +115,7 @@ nav .search-bar input[type="search"] {
   color: var(--color-dark);
 }
 
-nav .search-bar input[type="search"]::placeholder {
+.search-bar input[type="search"]::placeholder {
   color: var(--color-gray);
 }
 
@@ -397,23 +397,106 @@ main .container .left .profile {
   margin: 0.6rem;
 }
 
-.middle .feed .liked-by{
+.middle .feed .liked-by {
+  display: flex;
+}
+
+.middle .feed .liked-by span {
+  display: block;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--color-white);
+  margin-left: -0.6rem;
+}
+
+.middle .feed .liked-by span:first-child {
+  margin: 0;
+}
+.middle .feed .liked-by p {
+  margin-left: 0.5rem;
+}
+
+/*==== RIGHT ====*/
+main .container .right {
+  height: max-content;
+  position: sticky;
+  top: var(--sticky-top-right);
+  bottom: 0;
+}
+
+.right .messages {
+  background: white;
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+}
+
+.right .messages .heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.right .messages i {
+    font-size: 1.4rem;
+}
+
+.right .messages .search-bar {
     display: flex;
+    margin-bottom: 1rem;
 }
 
-.middle .feed .liked-by span{
-    display: block;
-    width: 1.4rem;
-    height: 1.4rem;
+.right .messages .category{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.right .messages .category h6 {
+    width: 100%;
+    text-align: center;
+    border-bottom: 4px solid var(--color-light);
+    padding-bottom: 0.5rem;
+    font-size: 0.85rem;
+}
+
+.right .messages .category .active{
+    border-color: var(--color-dark);
+}
+
+.right .messages .message {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: flex-start;
+}
+
+.right .message .profile-picture {
+    position: relative;
+    overflow: visible;
+}
+
+.right .message .profile-picture img {
     border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid var(--color-white);
-    margin-left: -0.6rem;
 }
 
-.middle .feed .liked-by span:first-child{
+.right .messages .message:last-child{
     margin: 0;
 }
-.middle .feed .liked-by p{
-    margin-left: 0.5rem;
+
+.right .messages .message .p{
+    font-size: 0.8rem;
+}
+
+.right .messages .message .profile-picture .active{
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    border: 3px solid var(--color-white);
+    background: var(--color-success);
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
