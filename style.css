@@ -596,3 +596,47 @@ main .container .right {
     background: var(--color-primary);
 }
 
+/*---------- PRIMARY COLORS - CHOOSE COLOR ---------*/
+.customize-theme .color {
+    margin-top: 2rem;
+}
+.customize-theme .choose-color{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-light);
+    padding: var(--search-padding);
+    border-radius: var(--card-border-radius);
+}
+
+.customize-theme .choose-color span {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+}
+
+/*
+    hsl is used because it is more flexible when changing the color. 
+    You can just change the hue to have a different color with the same (spirit) because the other values doesn't change 
+*/
+.customize-theme .choose-color span:nth-child(1){
+    background: hsl(252, 75%, 60%); 
+}
+.customize-theme .choose-color span:nth-child(2){
+    background: hsl(52, 75%, 60%);
+}
+.customize-theme .choose-color span:nth-child(3){
+    background: hsl(352, 75%, 60%);
+}
+.customize-theme .choose-color span:nth-child(4){
+    background: hsl(152, 75%, 60%);
+}
+.customize-theme .choose-color span:nth-child(5){
+    background: hsl(202, 75%, 60%);
+}
+
+.customize-theme .choose-color span.active {
+    border: 5px solid white;
+}
+
+
