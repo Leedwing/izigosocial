@@ -442,201 +442,253 @@ main .container .right {
 }
 
 .right .messages i {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 
 .right .messages .search-bar {
-    display: flex;
-    margin-bottom: 1rem;
+  display: flex;
+  margin-bottom: 1rem;
 }
 
-.right .messages .category{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 1rem;
+.right .messages .category {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .right .messages .category h6 {
-    width: 100%;
-    text-align: center;
-    border-bottom: 4px solid var(--color-light);
-    padding-bottom: 0.5rem;
-    font-size: 0.85rem;
+  width: 100%;
+  text-align: center;
+  border-bottom: 4px solid var(--color-light);
+  padding-bottom: 0.5rem;
+  font-size: 0.85rem;
 }
 
-.right .messages .category .active{
-    border-color: var(--color-dark);
+.right .messages .category .active {
+  border-color: var(--color-dark);
 }
 
-.right .messages .message-requests{
-    color: var(--color-primary);
+.right .messages .message-requests {
+  color: var(--color-primary);
 }
 
 .right .messages .message {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    align-items: flex-start;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  align-items: flex-start;
 }
 
 .right .message .profile-picture {
-    position: relative;
-    overflow: visible;
+  position: relative;
+  overflow: visible;
 }
 
 .right .message .profile-picture img {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
-.right .messages .message:last-child{
-    margin: 0;
+.right .messages .message:last-child {
+  margin: 0;
 }
 
-.right .messages .message p{
-    font-size: 0.8rem;
+.right .messages .message p {
+  font-size: 0.8rem;
 }
 
-.right .messages .message .profile-picture .active{
-    width: 0.8rem;
-    height: 0.8rem;
-    border-radius: 50%;
-    border: 3px solid var(--color-white);
-    background: var(--color-success);
-    position: absolute;
-    bottom: 0;
-    right: 0;
+.right .messages .message .profile-picture .active {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  border: 3px solid var(--color-white);
+  background: var(--color-success);
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
-
 
 /*----- FRIENDS REQUESTS -----*/
-.right .friend-requests{
-    margin-top: 1rem;
+.right .friend-requests {
+  margin-top: 1rem;
 }
 
-.right .friend-requests h4{
-    color: var(--color-gray);
-    margin: 1rem 0;
+.right .friend-requests h4 {
+  color: var(--color-gray);
+  margin: 1rem 0;
 }
 
 .right .request {
-    background: white;
-    padding: var(--card-padding);
-    border-radius: var(--card-border-radius);
-    margin-bottom: 0.7rem;
+  background: white;
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  margin-bottom: 0.7rem;
 }
 
 .right .request .info {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .right .request .action {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
 }
-
 
 /*========================== END OF THEME CUSTOMIZATION  ========================*/
 .customize-theme {
-    background: rgba(255, 255, 255, 0.5); /*couleur blanche avec une transparance de 0.5, pour que qu'on puisse voir la page à traver.*/
-    width: 100vw; /*équivaut à 100% de la taile de l'écran. On ne pourra pas cliqué sur la page en arrière plan car ce composant est devant*/
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100; /*Pour que le modal soit toujours l'élement le plus au dessus*/ 
-    text-align: center; /*aligne les élements d'un container a centre (horizontalement) comme la fonction de dispositon de texte de microsoft office*/
-    display: grid;
-    place-items: center; /*fonctionne avec le grid - place les éléments du grid au centre de l'écran*/
-    font-size: 0.9rem;
+  background: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /*couleur blanche avec une transparance de 0.5, pour que qu'on puisse voir la page à traver.*/
+  width: 100vw; /*équivaut à 100% de la taile de l'écran. On ne pourra pas cliqué sur la page en arrière plan car ce composant est devant*/
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100; /*Pour que le modal soit toujours l'élement le plus au dessus*/
+  text-align: center; /*aligne les élements d'un container a centre (horizontalement) comme la fonction de dispositon de texte de microsoft office*/
+  display: grid;
+  place-items: center; /*fonctionne avec le grid - place les éléments du grid au centre de l'écran*/
+  font-size: 0.9rem;
 }
 
-.customize-theme .card{
-    background: var(--color-white);
-    padding: 3rem;
-    border-radius: var(--card-border-radius);
-    width: 50%;
+.customize-theme .card {
+  background: var(--color-white);
+  padding: 3rem;
+  border-radius: var(--card-border-radius);
+  width: 50%;
 }
 
 /*---------------- FONT SIZES -------------*/
-.customize-theme .font-size{
-    margin-top: 5rem;
+.customize-theme .font-size {
+  margin-top: 5rem;
 }
 
 .customize-theme .font-size > div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--color-light);
-    padding: var(--search-padding);
-    border-radius: var(--card-border-radius);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-light);
+  padding: var(--search-padding);
+  border-radius: var(--card-border-radius);
 }
 
 .customize-theme .choose-size {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--color-secondary);
-    height: 0.3rem;
-    width: 100%;
-    margin: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-secondary);
+  height: 0.3rem;
+  width: 100%;
+  margin: 0 1rem;
 }
 
 .customize-theme .choose-size span {
-    width: 1rem;
-    height: 1rem;
-    background: var(--color-secondary);
-    border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  background: var(--color-secondary);
+  border-radius: 50%;
 }
 
-.customize-theme .choose-size span.active { /*span.active - collé parce que la classe est directement à l'intérieur de l'élément span*/
-    background: var(--color-primary);
+.customize-theme .choose-size span.active {
+  /*span.active - collé parce que la classe est directement à l'intérieur de l'élément span*/
+  background: var(--color-primary);
 }
 
 /*---------- PRIMARY COLORS - CHOOSE COLOR ---------*/
 .customize-theme .color {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
-.customize-theme .choose-color{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: var(--color-light);
-    padding: var(--search-padding);
-    border-radius: var(--card-border-radius);
+.customize-theme .choose-color {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-light);
+  padding: var(--search-padding);
+  border-radius: var(--card-border-radius);
 }
 
 .customize-theme .choose-color span {
-    width: 2.2rem;
-    height: 2.2rem;
-    border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
 }
 
 /*
     hsl is used because it is more flexible when changing the color. 
     You can just change the hue to have a different color with the same (spirit) because the other values doesn't change 
 */
-.customize-theme .choose-color span:nth-child(1){
-    background: hsl(252, 75%, 60%); 
+.customize-theme .choose-color span:nth-child(1) {
+  background: hsl(252, 75%, 60%);
 }
-.customize-theme .choose-color span:nth-child(2){
-    background: hsl(52, 75%, 60%);
+.customize-theme .choose-color span:nth-child(2) {
+  background: hsl(52, 75%, 60%);
 }
-.customize-theme .choose-color span:nth-child(3){
-    background: hsl(352, 75%, 60%);
+.customize-theme .choose-color span:nth-child(3) {
+  background: hsl(352, 75%, 60%);
 }
-.customize-theme .choose-color span:nth-child(4){
-    background: hsl(152, 75%, 60%);
+.customize-theme .choose-color span:nth-child(4) {
+  background: hsl(152, 75%, 60%);
 }
-.customize-theme .choose-color span:nth-child(5){
-    background: hsl(202, 75%, 60%);
+.customize-theme .choose-color span:nth-child(5) {
+  background: hsl(202, 75%, 60%);
 }
 
 .customize-theme .choose-color span.active {
-    border: 5px solid white;
+  border: 5px solid white;
 }
 
+/*---------- BACKGROUND COLORS ---------*/
+.customize-theme .background {
+  margin-top: 2rem;
+}
 
+.customize-theme .choose-bg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.customize-theme .choose-bg > div {
+  display: flex;
+  align-items: center;
+  padding: var(--card-padding);
+  width: 100%; /*grâce au flex du parent, les elements auront la même largeur peu importe la taile du texte à l'intérieur*/
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  gap: 1rem;
+}
+
+.customize-theme .choose-bg > div.active {
+  border: 2px solid var(--color-primary);
+}
+
+.customize-theme .choose-bg .bg-1 {
+  background: white;
+  color: black;
+}
+
+.customize-theme .choose-bg .bg-2 {
+  background: hsl(252, 30%, 17%);
+  color: white;
+}
+
+.customize-theme .choose-bg .bg-3 {
+  background: hsl(252, 30%, 10%);
+  color: white;
+}
+
+.customize-theme .choose-bg > div span {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid var(--color-gray);
+    border-radius: 50%;
+}
