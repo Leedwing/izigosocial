@@ -767,12 +767,8 @@ MEDIA QUERIES FOR SMALL TABLETS AND MOBILE PHONES
     display: block;
   }
 
-  main .container .left .sidebar > div h3 {
-    display: none;
-  }
-
   main .container .middle{
-    grid-column: 1/3;/*??actually not needed because we have a container with LEFT "0" in the grid template column*/
+    grid-column: 1/3;
   }
 
  main .container .right{
