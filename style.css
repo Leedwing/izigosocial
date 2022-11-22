@@ -133,7 +133,7 @@ main {
 
 main .container {
   display: grid;
-  grid-template-columns: 18vw auto 20vw;
+  grid-template-columns: 18vw auto 20vw; /*LEFT - MIDDLE - RIGHT*/
   column-gap: 2rem;
   position: relative;
 }
@@ -555,6 +555,7 @@ main .container .right {
   display: grid;
   place-items: center; /*fonctionne avec le grid - place les éléments du grid au centre de l'écran*/
   font-size: 0.9rem;
+  display: none;
 }
 
 .customize-theme .card {
@@ -692,3 +693,39 @@ main .container .right {
     border: 2px solid var(--color-gray);
     border-radius: 50%;
 }
+
+/*========================== 
+MEDIA QUERIES FOR SMAL LAPTOPS AND BIG TABLETS  
+========================
+*/
+@media screen and (max-width: 1200px){
+    .container{
+        width: 96%;
+    }
+
+    main .container {
+        grid-template-columns: 5rem auto 30vw;
+        gap: 1rem;
+    }
+
+    main .container .left {
+        width: 5rem;
+        z-index: 5; /*de telle sorte qu'il soit au dessus de tous les autre compartiments (middle, right, navbar)*/
+    }
+
+    main .container .left .profile {
+        display: none;
+    }
+
+    main .container .left .sidebar h3 {
+        display: none;
+    }
+
+    main .container .left .btn{
+        display: none;
+    }
+}
+
+
+
+
