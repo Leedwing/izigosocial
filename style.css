@@ -492,7 +492,7 @@ main .container .right {
     margin: 0;
 }
 
-.right .messages .message .p{
+.right .messages .message p{
     font-size: 0.8rem;
 }
 
@@ -539,4 +539,60 @@ main .container .right {
 }
 
 
+/*========================== END OF THEME CUSTOMIZATION  ========================*/
+.customize-theme {
+    background: rgba(255, 255, 255, 0.5); /*couleur blanche avec une transparance de 0.5, pour que qu'on puisse voir la page à traver.*/
+    width: 100vw; /*équivaut à 100% de la taile de l'écran. On ne pourra pas cliqué sur la page en arrière plan car ce composant est devant*/
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100; /*Pour que le modal soit toujours l'élement le plus au dessus*/ 
+    text-align: center; /*aligne les élements d'un container a centre (horizontalement) comme la fonction de dispositon de texte de microsoft office*/
+    display: grid;
+    place-items: center; /*fonctionne avec le grid - place les éléments du grid au centre de l'écran*/
+    font-size: 0.9rem;
+}
+
+.customize-theme .card{
+    background: var(--color-white);
+    padding: 3rem;
+    border-radius: var(--card-border-radius);
+    width: 50%;
+}
+
+/*---------------- FONT SIZES -------------*/
+.customize-theme .font-size{
+    margin-top: 5rem;
+}
+
+.customize-theme .font-size > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-light);
+    padding: var(--search-padding);
+    border-radius: var(--card-border-radius);
+}
+
+.customize-theme .choose-size {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-secondary);
+    height: 0.3rem;
+    width: 100%;
+    margin: 0 1rem;
+}
+
+.customize-theme .choose-size span {
+    width: 1rem;
+    height: 1rem;
+    background: var(--color-secondary);
+    border-radius: 50%;
+}
+
+.customize-theme .choose-size span.active { /*span.active - collé parce que la classe est directement à l'intérieur de l'élément span*/
+    background: var(--color-primary);
+}
 
