@@ -5,6 +5,8 @@ const messagesNotifiacation = document.querySelector('#messages-notifications');
 
 // RIGHT
 const messages = document.querySelector('.messages');
+const message = messages.querySelectorAll('.message');
+const messageSearch = document.querySelector('#message-search');
 
 // ======================== SIDEBAR ========================
 /** function to remove active class from all menu items */
@@ -31,6 +33,7 @@ menuItems.forEach(item => {
 
 
 // ======================== MESSAGES ========================
+/** Hightlight messages card when messages menu item is clicked */
 messagesNotifiacation.addEventListener('click', () => {
     messages.style.boxShadow = '0 0 1rem var(--color-primary)';
     messagesNotifiacation.querySelector('.notification-count').
@@ -39,3 +42,18 @@ messagesNotifiacation.addEventListener('click', () => {
         messages.style.boxShadow = 'none';
     }, 2000);
 })
+
+const searchMessage = () => {
+    // grap the value from the message seach bar
+    const val = messageSearch.value.toLowerCase();
+    message.forEach(user => {
+        let name = user.querySelector('h5').textContent.toLowerCase();
+        if (name.indexOf(val) != -1) {
+            user.style.display = 'flex';
+        } else {
+            user.style.display = 'none';
+        }
+    })
+}
+
+messageSearch.addEventListener('keyup', searchMessage);
