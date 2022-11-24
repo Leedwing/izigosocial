@@ -595,6 +595,7 @@ main .container .right {
   height: 1rem;
   background: var(--color-secondary);
   border-radius: 50%;
+  cursor: pointer; 
 }
 
 .customize-theme .choose-size span.active {

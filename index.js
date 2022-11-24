@@ -11,6 +11,8 @@ const messageSearch = document.querySelector('#message-search');
 // THEME
 const theme = document.querySelector('#theme');
 const themeModal = document.querySelector('.customize-theme');
+const fontSizes = document.querySelectorAll('.choose-size span');
+var root = document.querySelector(':root');
 
 // ======================== SIDEBAR ========================
 /** function to remove active class from all menu items */
@@ -76,3 +78,48 @@ const closeThemeModal = (e) => {
 
 theme.addEventListener('click', openThemeModal);
 themeModal.addEventListener('click', closeThemeModal);
+
+// ----------- FONTS -----------
+const removeSizeSelector = () => {
+    fontSizes.forEach(size => {
+        size.classList.remove('active');
+    })
+}
+
+fontSizes.forEach(size => {
+    let fontSize;
+    size.addEventListener('click', () => {
+        removeSizeSelector();
+        if (size.classList.contains('font-size-1')) {
+            size.classList.add('active');
+            fontSize = '10px';
+            root.style.setProperty('----sticky-top-left', '5.4rem');
+            root.style.setProperty('----sticky-top-right', '5.4rem');
+        } else if (size.classList.contains('font-size-2')) {
+            size.classList.add('active');
+            fontSize = '13px';
+            root.style.setProperty('----sticky-top-left', '5.4rem');
+            root.style.setProperty('----sticky-top-right', '-7rem');
+        } else if (size.classList.contains('font-size-3')) {
+            size.classList.add('active');
+            fontSize = '16px';
+            root.style.setProperty('----sticky-top-left', '5.4rem');
+            root.style.setProperty('----sticky-top-right', '-17rem');
+        } else if (size.classList.contains('font-size-4')) {
+            size.classList.add('active');
+            fontSize = '19px';
+            root.style.setProperty('----sticky-top-left', '5.4rem');
+            root.style.setProperty('----sticky-top-right', '-25rem');
+        } else if (size.classList.contains('font-size-5')) {
+            size.classList.add('active');
+            fontSize = '22px';
+            root.style.setProperty('----sticky-top-left', '5.4rem');
+            root.style.setProperty('----sticky-top-right', '-35rem');
+        }
+
+        // change font size of the root html element - BECAUSE WE USED "rem" for all our font size
+        document.querySelector('html').style.fontSize = fontSize;
+    })
+
+
+})
