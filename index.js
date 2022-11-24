@@ -124,8 +124,15 @@ fontSizes.forEach(size => {
 })
 
 // ----------- COLOR PALETTE / PRIMARY COLOR -----------
+const removeThemeSelector = () => {
+    colorPalette.forEach(color => {
+        color.classList.remove('active');
+    })
+}
+
 colorPalette.forEach(color => {
     color.addEventListener('click', () => {
+        removeThemeSelector();
         let primaryHue;
         if (color.classList.contains('color-1')) {
             primaryHue = 252;
@@ -138,6 +145,8 @@ colorPalette.forEach(color => {
         } else if (color.classList.contains('color-5')) {
             primaryHue = 202;
         }
+
+        color.classList.add('active');
 
         root.style.setProperty('--primary-color-hue', primaryHue);
     })
