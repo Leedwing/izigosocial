@@ -68,4 +68,11 @@ const openThemeModal = () => {
     themeModal.style.display = 'grid';
 }
 
+const closeThemeModal = (e) => {
+    if (e.target.classList.contains('customize-theme')) {
+        themeModal.style.display = 'none';
+    }
+}
+
 theme.addEventListener('click', openThemeModal);
+themeModal.addEventListener('click', closeThemeModal);
