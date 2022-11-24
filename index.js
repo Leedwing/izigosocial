@@ -13,6 +13,7 @@ const theme = document.querySelector('#theme');
 const themeModal = document.querySelector('.customize-theme');
 const fontSizes = document.querySelectorAll('.choose-size span');
 var root = document.querySelector(':root');
+const colorPalette = document.querySelectorAll('.choose-color span');
 
 // ======================== SIDEBAR ========================
 /** function to remove active class from all menu items */
@@ -120,6 +121,24 @@ fontSizes.forEach(size => {
         // change font size of the root html element - BECAUSE WE USED "rem" for all our font size
         document.querySelector('html').style.fontSize = fontSize;
     })
+})
 
+// ----------- COLOR PALETTE / PRIMARY COLOR -----------
+colorPalette.forEach(color => {
+    color.addEventListener('click', () => {
+        let primaryHue;
+        if (color.classList.contains('color-1')) {
+            primaryHue = 252;
+        } else if (color.classList.contains('color-2')) {
+            primaryHue = 52;
+        } else if (color.classList.contains('color-3')) {
+            primaryHue = 352;
+        } else if (color.classList.contains('color-4')) {
+            primaryHue = 152;
+        } else if (color.classList.contains('color-5')) {
+            primaryHue = 202;
+        }
 
+        root.style.setProperty('--primary-color-hue', primaryHue);
+    })
 })
