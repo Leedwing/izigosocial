@@ -8,6 +8,10 @@ const messages = document.querySelector('.messages');
 const message = messages.querySelectorAll('.message');
 const messageSearch = document.querySelector('#message-search');
 
+// THEME
+const theme = document.querySelector('#theme');
+const themeModal = document.querySelector('.customize-theme');
+
 // ======================== SIDEBAR ========================
 /** function to remove active class from all menu items */
 const changeActiveItem = () => {
@@ -57,3 +61,11 @@ const searchMessage = () => {
 }
 
 messageSearch.addEventListener('keyup', searchMessage);
+
+
+// ======================== THEME/DISPLAY CUSTOMIZATION ========================
+const openThemeModal = () => {
+    themeModal.style.display = 'grid';
+}
+
+theme.addEventListener('click', openThemeModal);
